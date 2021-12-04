@@ -40,8 +40,8 @@ public class UsuarioServiceImpl implements UsuarioService {
 	}
 
 	@Override
-	public List<Usuario> login(String username, String password) {
-		List<Usuario> Usuarios = UsuarioRepository.login(username, password);
+	public List<Usuario> login(String usuario, String contraseña) {
+		List<Usuario> Usuarios = UsuarioRepository.login(usuario, contraseña);
 		return Usuarios;
 	}
 
