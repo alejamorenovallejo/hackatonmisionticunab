@@ -16,29 +16,29 @@ public class Cupones implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idCupones;
+	private int id_cupones;
 	
 	@Column(length = 45, nullable=false)
 	private String nombre;
-	
-	@Column(length = 45, nullable=false)
-	private String Producto;
+        
+        @Column(length = 45, nullable=false)
+	private String productoIdProducto;
 	
 	@Column(length = 45, nullable=false)
 	private String valor;
+        
+        @Column(length = 45, nullable=false)
+	private String tipoCuponIdTipoCupon;
 	
 	@Column(length = 45, nullable=false)
-	private String fechaCaducidad;
-	
-	@Column(length = 45, nullable=false)
-	private String TipoCupon;
+	private String fecha_caducidad;
 
-    public int getIdCupones() {
-        return idCupones;
+    public int getId_cupones() {
+        return id_cupones;
     }
 
-    public void setIdCupones(int idCupones) {
-        this.idCupones = idCupones;
+    public void setId_cupones(int id_cupones) {
+        this.id_cupones = id_cupones;
     }
 
     public String getNombre() {
@@ -49,12 +49,12 @@ public class Cupones implements Serializable{
         this.nombre = nombre;
     }
 
-    public String getProducto_idProducto() {
-        return Producto;
+    public String getProductoIdProducto() {
+        return productoIdProducto;
     }
 
-    public void setProducto_idProducto(String Producto_idProducto) {
-        this.Producto = Producto_idProducto;
+    public void setProductoIdProducto(String productoIdProducto) {
+        this.productoIdProducto = productoIdProducto;
     }
 
     public String getValor() {
@@ -65,21 +65,21 @@ public class Cupones implements Serializable{
         this.valor = valor;
     }
 
-    public String getFechaCaducidad() {
-        return fechaCaducidad;
+    public String getTipoCuponIdTipoCupon() {
+        return tipoCuponIdTipoCupon;
     }
 
-    public void setFechaCaducidad(String fechaCaducidad) {
-        this.fechaCaducidad = fechaCaducidad;
+    public void setTipoCuponIdTipoCupon(String tipoCuponIdTipoCupon) {
+        this.tipoCuponIdTipoCupon = tipoCuponIdTipoCupon;
     }
 
-    public String getTipoCupon_idTipoCupon() {
-        return TipoCupon;
+    public String getFecha_caducidad() {
+        return fecha_caducidad;
     }
 
-    public void setTipoCupon_idTipoCupon(String TipoCupon_idTipoCupon) {
-        this.TipoCupon = TipoCupon_idTipoCupon;
+    public void setFecha_caducidad(String fecha_caducidad) {
+        this.fecha_caducidad = fecha_caducidad;
     }
-	
 
+        
 }
