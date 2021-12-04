@@ -6,6 +6,7 @@
 package com.ejemplo.tiendaalamano.model;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -21,7 +22,8 @@ public class Puntos implements Serializable{
     @Id
     private int id_puntos;
     
-    private int valor;
+    @Column(nullable=false)
+    private float valor;
 
     public int getId_puntos() {
         return id_puntos;
@@ -31,11 +33,11 @@ public class Puntos implements Serializable{
         this.id_puntos = id_puntos;
     }
 
-    public int getValor() {
+    public float getValor() {
         return valor;
     }
 
-    public void setValor(int valor) {
+    public void setValor(float valor) {
         this.valor = valor;
     }
 }

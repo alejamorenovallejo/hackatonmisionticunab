@@ -9,4 +9,7 @@ import java.util.List;
  */
 public interface PuntosService {
     public List<Puntos> findAll();
+    public Puntos save(Puntos Puntos);
+    /*Puntos getPuntosById(Long id);*/
+
 }
