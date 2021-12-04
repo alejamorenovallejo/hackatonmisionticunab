@@ -1,7 +1,7 @@
 package com.ejemplo.tiendaalamano.service;
 
-import com.ejemplo.tiendaalamano.model.PuntoVenta;
-import com.ejemplo.tiendaalamano.repository.PuntoVentaRepository;
+import com.ejemplo.tiendaalamano.model.RangoEntrega;
+import com.ejemplo.tiendaalamano.repository.RangoEntregaRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,15 +12,15 @@ import org.springframework.transaction.annotation.Transactional;
  * @author ALEJANDRA MORENO VALLEJO
  */
 @Service
-public class PuntoVentaServiceImpl implements PuntoVentaService {
+public class RangoEntregaServiceImpl implements RangoEntregaService {
 
     @Autowired
-    private PuntoVentaRepository puntoVentaRepository;
+    private RangoEntregaRepository rangoentregaRepository;
            
     @Override
     @Transactional(readOnly = true)
-    public List<PuntoVenta> findAll() {
-        return puntoVentaRepository.findAll();
+    public List<RangoEntrega> findAll() {
+        return rangoentregaRepository.findAll();
     }
     
 }

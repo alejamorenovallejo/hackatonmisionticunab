@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
- * @author Leandro Aguirre
+ * @author ALEJANDRA MORENO VALLEJO
  */
 @Service
 public class PuntosServiceImpl implements PuntosService {

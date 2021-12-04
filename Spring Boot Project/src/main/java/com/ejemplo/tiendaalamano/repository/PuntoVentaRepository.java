@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
- * @author Leandro Aguirre
+ * @author ALEJANDRA MORENO VALLEJO
  */
 public interface PuntoVentaRepository extends JpaRepository<PuntoVenta, Long>{
     

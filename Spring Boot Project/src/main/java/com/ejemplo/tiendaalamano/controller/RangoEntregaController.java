@@ -1,7 +1,7 @@
 package com.ejemplo.tiendaalamano.controller;
 
-import com.ejemplo.tiendaalamano.model.PuntoVenta;
-import com.ejemplo.tiendaalamano.repository.PuntoVentaRepository;
+import com.ejemplo.tiendaalamano.model.RangoEntrega;
+import com.ejemplo.tiendaalamano.repository.RangoEntregaRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,13 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-public class PuntoVentaController {
+public class RangoEntregaController {
     @Autowired
-    private PuntoVentaRepository puntoventaRepository;
+    private RangoEntregaRepository rangoentregaRepository;
     
-    @RequestMapping(value = "/puntoventa/all", method = RequestMethod.GET)
+    @RequestMapping(value = "/rangoentrega/all", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
-    public List<PuntoVenta> getAllModels() {
-        return puntoventaRepository.findAll();
+    public List<RangoEntrega> getAllModels() {
+        return rangoentregaRepository.findAll();
     }
 }

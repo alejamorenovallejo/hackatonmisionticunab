@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
- * @author Leandro Aguirre
+ * @author ALEJANDRA MORENO VALLEJO
  */
 
 @RestController

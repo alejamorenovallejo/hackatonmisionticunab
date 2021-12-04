@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author Leandro Aguirre
+ * @author ALEJANDRA MORENO VALLEJO
  */
 
 @Entity

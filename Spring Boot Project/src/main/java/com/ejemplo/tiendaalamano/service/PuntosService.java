@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  *
- * @author Leandro Aguirre
+ * @author ALEJANDRA MORENO VALLEJO
  */
 public interface PuntosService {
     public List<Puntos> findAll();
