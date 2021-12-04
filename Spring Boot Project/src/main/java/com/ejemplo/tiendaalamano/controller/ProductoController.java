@@ -23,7 +23,7 @@ public class ProductoController {
     
     @RequestMapping(value = "/producto/all", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
-    public List<Producto> getAllModels() {
+    public List<Producto> getAllProductos() {
         return productoRepository.findAll();
     }
 }

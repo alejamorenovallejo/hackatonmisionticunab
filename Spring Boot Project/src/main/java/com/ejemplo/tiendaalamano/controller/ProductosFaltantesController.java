@@ -1,7 +1,7 @@
 package com.ejemplo.tiendaalamano.controller;
 
-import com.ejemplo.tiendaalamano.model.Pqr;
-import com.ejemplo.tiendaalamano.repository.PqrRepository;
+import com.ejemplo.tiendaalamano.model.ProductosFaltantes;
+import com.ejemplo.tiendaalamano.repository.ProductosFaltantesRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,13 +17,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-public class PqrController {
+public class ProductosFaltantesController {
     @Autowired
-    private PqrRepository pqrRepository;
-        
-    @RequestMapping(value = "/pqr/all", method = RequestMethod.GET)
+    private ProductosFaltantesRepository productosFaltantesRepository ;
+
+    @RequestMapping(value = "/productosfaltantes/all", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
-    public List<Pqr> getAllPqrs() {
-        return pqrRepository.findAll();
+    public List<ProductosFaltantes> getAllProductosfaltantes() {
+        return productosFaltantesRepository.findAll();
     }
+    
 }
