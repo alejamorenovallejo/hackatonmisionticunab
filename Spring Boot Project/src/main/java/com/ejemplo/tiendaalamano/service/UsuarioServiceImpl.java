@@ -38,11 +38,16 @@ public class UsuarioServiceImpl implements UsuarioService {
 	public void deleteById(Long id) {
 		UsuarioRepository.deleteById(id);
 	}
-
+/*
 	@Override
 	public List<Usuario> login(String usuario, String contraseña) {
 		List<Usuario> Usuarios = UsuarioRepository.login(usuario, contraseña);
 		return Usuarios;
 	}
+*/
 
+    @Override
+    public List<Usuario> login(String username, String password) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
