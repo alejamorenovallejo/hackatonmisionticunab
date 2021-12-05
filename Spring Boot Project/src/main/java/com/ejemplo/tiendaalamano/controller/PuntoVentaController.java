@@ -28,7 +28,7 @@ public class PuntoVentaController {
     //Consultar todos los puntos de venta
     @RequestMapping(value = "/puntoventa/all", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
-    public List<PuntoVenta> getAllModels() {
+    public List<PuntoVenta> getAllPuntoVenta() {
         return puntoventaRepository.findAll();
     }
     
