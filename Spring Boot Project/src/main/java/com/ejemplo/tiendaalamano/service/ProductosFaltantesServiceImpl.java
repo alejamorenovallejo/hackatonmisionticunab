@@ -4,6 +4,7 @@ import com.ejemplo.tiendaalamano.model.ProductosFaltantes;
 import com.ejemplo.tiendaalamano.repository.ProductosFaltantesRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -17,6 +18,12 @@ public class ProductosFaltantesServiceImpl implements ProductosFaltantesService{
     @Override
     public List<ProductosFaltantes> findAll() {
         return productosFaltantesRepository.findAll();
+    }
+    
+    @Override
+    @Transactional
+    public ProductosFaltantes save(ProductosFaltantes productosFaltantes) {
+        return productosFaltantesRepository.save(productosFaltantes);
     }
 
 }

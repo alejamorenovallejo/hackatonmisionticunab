@@ -23,4 +23,10 @@ public class PagoCuotaServiceImpl implements PagoCuotaService {
         return pagoCuotaRepository.findAll();
     }
     
+    @Override
+    @Transactional
+    public PagoCuota save(PagoCuota pagoCuota) {
+        return pagoCuotaRepository.save(pagoCuota);
+    }
+    
 }

@@ -5,6 +5,8 @@ import com.ejemplo.tiendaalamano.repository.ProductosFaltantesRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -25,6 +27,12 @@ public class ProductosFaltantesController {
     @ResponseStatus(HttpStatus.OK)
     public List<ProductosFaltantes> getAllProductosfaltantes() {
         return productosFaltantesRepository.findAll();
+    }
+    
+    @RequestMapping(value = "/productosfaltantes/crear", method = RequestMethod.POST, consumes = "application/json")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void createProductosFaltantes(@RequestBody @Validated ProductosFaltantes productosFaltantes) {
+        productosFaltantesRepository.save(productosFaltantes);
     }
     
 }

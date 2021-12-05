@@ -9,4 +9,5 @@ import java.util.List;
  */
 public interface PagoCuotaService {
     public List<PagoCuota> findAll();
+    public PagoCuota save(PagoCuota pagoCuota);
 }
