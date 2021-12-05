@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class CategoriaController {
     @Autowired
+    
     private CategoriaRepository categoriaRepository;
     // Listar todas Las categorias
     @RequestMapping(value = "/categoria/all", method = RequestMethod.GET)
