@@ -13,10 +13,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- *
- * @author
- */
 @Entity
 @Table(name="cliente")
 public class Cliente implements Serializable{
@@ -29,8 +25,8 @@ public class Cliente implements Serializable{
     @Column(length = 45, nullable=false)
     private String nombre;
     
-    @Column(length = 45, nullable=false)
-    private String tipo_Ducumento;
+    @Column(nullable=false)
+    private Long tipo_documento_id_tipo_Documento;
     
     @Column(length = 45, nullable=false)
     private String identificacion;
@@ -72,13 +68,15 @@ public class Cliente implements Serializable{
         this.nombre = nombre;
     }
 
-    public String getTipo_Ducumento() {
-        return tipo_Ducumento;
+    public Long getTipo_documento_id_tipo_Documento() {
+        return tipo_documento_id_tipo_Documento;
     }
 
-    public void setTipo_Ducumento(String tipo_Ducumento) {
-        this.tipo_Ducumento = tipo_Ducumento;
+    public void setTipo_documento_id_tipo_Documento(Long tipo_documento_id_tipo_Documento) {
+        this.tipo_documento_id_tipo_Documento = tipo_documento_id_tipo_Documento;
     }
+
+    
 
     public String getIdentificacion() {
         return identificacion;

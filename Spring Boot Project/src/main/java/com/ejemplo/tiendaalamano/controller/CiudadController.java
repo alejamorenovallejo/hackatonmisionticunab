@@ -25,7 +25,7 @@ public class CiudadController {
     @Autowired
     private CiudadRepository ciudadRepository;
     
-    //Consultar todos los puntos
+    //Traer todas las ciudades
     @RequestMapping(value = "/ciudad/all", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public List<Ciudad> getAllciudad() {
@@ -39,7 +39,7 @@ public class CiudadController {
         ciudadRepository.save(ciudad);
     }
     
-    //Consultar puntos por id
+    //Consultar ciudad por id
     @RequestMapping(value = "/ciudad/consultar/{id}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public Optional<Ciudad> getCiudadById(@PathVariable Long id) {

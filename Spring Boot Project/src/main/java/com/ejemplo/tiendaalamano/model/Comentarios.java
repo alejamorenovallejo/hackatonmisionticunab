@@ -29,8 +29,8 @@ public class Comentarios implements Serializable{
     @Column(length = 45, nullable=false)
     private String comentario;
 
-    @Column(nullable=false)
-    private int producto_id_producto;
+    @Column(length = 45, nullable=false)
+    private Long producto_id_producto;
 
     public Long getId_Comentarios() {
         return id_Comentarios;
@@ -48,11 +48,11 @@ public class Comentarios implements Serializable{
         this.comentario = comentario;
     }
 
-    public int getProducto_id_producto() {
+    public Long getProducto_id_producto() {
         return producto_id_producto;
     }
 
-    public void setProducto_id_producto(int producto_id_producto) {
+    public void setProducto_id_producto(Long producto_id_producto) {
         this.producto_id_producto = producto_id_producto;
     }
 
