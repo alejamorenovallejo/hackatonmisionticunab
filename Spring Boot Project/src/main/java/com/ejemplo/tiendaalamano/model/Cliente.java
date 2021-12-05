@@ -50,7 +50,7 @@ public class Cliente implements Serializable{
     @Column(length = 45, nullable=false)
     private String direccion3;
     
-    @Column(length = 45, nullable=false)
+    @Column(nullable=false)
     private Long puntos_acumulados;
     
     @Column(length = 45, nullable=false)

@@ -26,31 +26,31 @@ public class Compra implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_Compra;
         
-    @Column(length = 45, nullable=false)
+    @Column(nullable=false)
     private Long id_Cliente;
     
-    @Column(length = 45, nullable=false)
+    @Column(nullable=false)
     private Long descuento;
     
-    @Column(length = 45, nullable=false)
+    @Column(nullable=false)
     private Long impuesto;
     
-    @Column(length = 45, nullable=false)
+    @Column(nullable=false)
     private Long totalCompra;
     
     @Column(length = 45, nullable=false)
     private String envio;
     
-    @Column(length = 45, nullable=false)
+    @Column(nullable=false)
     private Integer puntos_compra;
     
-    @Column(length = 45, nullable=false)
+    @Column(nullable=false)
     private Integer puntos_gastados;
     
-    @Column(length = 45, nullable=false)
+    @Column(nullable=false)
     private Integer tipo_pago;
     
-    @Column(length = 45, nullable=false)
+    @Column(nullable=false)
     private Integer cantidad_Cuotas;
     
     @Column(length = 45, nullable=false)
