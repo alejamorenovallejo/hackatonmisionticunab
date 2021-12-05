@@ -13,7 +13,7 @@ import javax.persistence.Table;
  * @author Leandro Aguirre
  */
 @Entity
-@Table(name = "PQR")
+@Table(name = "pqr")
 public class Pqr implements Serializable {
 
     private static final long serialVersionUID = -5773962493781143007L;

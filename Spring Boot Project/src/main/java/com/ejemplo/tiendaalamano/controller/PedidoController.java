@@ -1,7 +1,7 @@
 package com.ejemplo.tiendaalamano.controller;
 
-import com.ejemplo.tiendaalamano.model.Pqr;
-import com.ejemplo.tiendaalamano.repository.PqrRepository;
+import com.ejemplo.tiendaalamano.model.Pedido;
+import com.ejemplo.tiendaalamano.repository.PedidoRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,22 +16,23 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author Leandro Aguirre
  */
-
 @RestController
 @RequestMapping("/api")
-public class PqrController {
+public class PedidoController {
+    
+    
     @Autowired
-    private PqrRepository pqrRepository;
-        
-    @RequestMapping(value = "/pqr/all", method = RequestMethod.GET)
+    private PedidoRepository pedidoRepository;
+    
+    @RequestMapping(value = "/pedido/all", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
-    public List<Pqr> getAllPqrs() {
-        return pqrRepository.findAll();
+    public List<Pedido> getAllPedidos() {
+        return pedidoRepository.findAll();
     }
     
-    @RequestMapping(value = "/pqr/crear", method = RequestMethod.POST, consumes = "application/json")
+    @RequestMapping(value = "/pedido/crear", method = RequestMethod.POST, consumes = "application/json")
     @ResponseStatus(HttpStatus.CREATED)
-    public void createPqr(@RequestBody @Validated Pqr pqr) {
-        pqrRepository.save(pqr);
+    public void createPedido(@RequestBody @Validated Pedido pedido) {
+        pedidoRepository.save(pedido);
     }
 }
