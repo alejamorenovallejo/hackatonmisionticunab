@@ -38,23 +38,23 @@ public class ProductoController {
     }
 
     //Consultar producto por id
-    @RequestMapping(value = "/pedido/consultar/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/producto/consultar/{id}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
-    public Optional<Producto> getPedidoById(@PathVariable Long id) {
+    public Optional<Producto> getProductoById(@PathVariable Long id) {
         return productoRepository.findById(id);
     }
     
     //Eliminar producto por id
     @RequestMapping(value = "/producto/eliminar/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
-    public void deletePedidoById(@PathVariable Long id) {
+    public void deleteProductoById(@PathVariable Long id) {
         productoRepository.deleteById(id);
     }
     
     //Actualizar producto por id
     @RequestMapping(value = "/producto/actualizar/{id}", method = RequestMethod.PUT, consumes = "application/json")
     @ResponseStatus(HttpStatus.OK)
-    public void updatePedidoById(@PathVariable Long id,@RequestBody @Validated Producto producto) {
+    public void updateProductoById(@PathVariable Long id,@RequestBody @Validated Producto producto) {
         productoRepository.save(producto);
     }
 }
