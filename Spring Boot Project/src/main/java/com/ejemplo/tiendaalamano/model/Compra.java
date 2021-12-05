@@ -27,7 +27,7 @@ public class Compra implements Serializable {
     private Long id_Compra;
         
     @Column(nullable=false)
-    private Long id_Cliente;
+    private Long cliente_id_Cliente;
     
     @Column(nullable=false)
     private Long descuento;
@@ -48,7 +48,7 @@ public class Compra implements Serializable {
     private Integer puntos_gastados;
     
     @Column(nullable=false)
-    private Integer tipo_pago;
+    private Integer tipo_pago_id_tipo_pago;
     
     @Column(nullable=false)
     private Integer cantidad_Cuotas;
@@ -64,13 +64,7 @@ public class Compra implements Serializable {
         this.id_Compra = id_Compra;
     }
 
-    public Long getId_Cliente() {
-        return id_Cliente;
-    }
-
-    public void setId_Cliente(Long id_Cliente) {
-        this.id_Cliente = id_Cliente;
-    }
+    
 
     public Long getDescuento() {
         return descuento;
@@ -120,13 +114,23 @@ public class Compra implements Serializable {
         this.puntos_gastados = puntos_gastados;
     }
 
-    public Integer getTipo_pago() {
-        return tipo_pago;
+    public Long getCliente_id_Cliente() {
+        return cliente_id_Cliente;
     }
 
-    public void setTipo_pago(Integer tipo_pago) {
-        this.tipo_pago = tipo_pago;
+    public void setCliente_id_Cliente(Long cliente_id_Cliente) {
+        this.cliente_id_Cliente = cliente_id_Cliente;
     }
+
+    public Integer getTipo_pago_id_tipo_pago() {
+        return tipo_pago_id_tipo_pago;
+    }
+
+    public void setTipo_pago_id_tipo_pago(Integer tipo_pago_id_tipo_pago) {
+        this.tipo_pago_id_tipo_pago = tipo_pago_id_tipo_pago;
+    }
+
+   
 
     public Integer getCantidad_Cuotas() {
         return cantidad_Cuotas;
