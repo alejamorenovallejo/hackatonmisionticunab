@@ -20,7 +20,7 @@ public class Pqr implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idPqr;
+    private long idPqr;
 
     @Column(length = 45, nullable = false)
     private String Pedido_idPedido;
@@ -28,11 +28,11 @@ public class Pqr implements Serializable {
     @Column(length = 255, nullable = false)
     private String mensaje;
 
-    public int getIdPqr() {
+    public long getIdPqr() {
         return idPqr;
     }
 
-    public void setIdPqr(int idPqr) {
+    public void setIdPqr(long idPqr) {
         this.idPqr = idPqr;
     }
 

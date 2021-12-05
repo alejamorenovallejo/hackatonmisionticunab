@@ -20,7 +20,7 @@ public class PagoCuota implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idPagoCuota;
+    private long idPagoCuota;
     
     @Column(nullable=false)
     private float saldo;
@@ -28,11 +28,11 @@ public class PagoCuota implements Serializable{
     @Column(nullable=false)
     private int cliente_idCliente;
 
-    public int getIdPagoCuota() {
+    public long getIdPagoCuota() {
         return idPagoCuota;
     }
 
-    public void setIdPagoCuota(int idPagoCuota) {
+    public void setIdPagoCuota(long idPagoCuota) {
         this.idPagoCuota = idPagoCuota;
     }
 

@@ -40,21 +40,21 @@ public class PedidoController {
         pedidoRepository.save(pedido);
     }
 
-    //Consultar puntos por id
+    //Consultar Pedidos por id
     @RequestMapping(value = "/pedido/consultar/{id}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public Optional<Pedido> getPedidoById(@PathVariable Long id) {
         return pedidoRepository.findById(id);
     }
     
-    //Eliminar puntos por id
+    //Eliminar Pedidos por id
     @RequestMapping(value = "/pedido/eliminar/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
     public void deletePedidoById(@PathVariable Long id) {
         pedidoRepository.deleteById(id);
     }
     
-    //Actualizar puntos por id
+    //Actualizar Pedidos por id
     @RequestMapping(value = "/pedido/actualizar/{id}", method = RequestMethod.PUT, consumes = "application/json")
     @ResponseStatus(HttpStatus.OK)
     public void updatePedidoById(@PathVariable Long id,@RequestBody @Validated Pedido pedido) {

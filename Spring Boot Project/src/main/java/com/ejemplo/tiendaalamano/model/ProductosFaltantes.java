@@ -20,7 +20,7 @@ public class ProductosFaltantes implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idProductosFaltantes;
+    private long idProductosFaltantes;
     
     @Column(nullable=false)
     private int pedidoIdPedido;
@@ -31,11 +31,11 @@ public class ProductosFaltantes implements Serializable {
     @Column(length = 255, nullable=false)
     private String mensaje;
 
-    public int getIdProductosFaltantes() {
+    public long getIdProductosFaltantes() {
         return idProductosFaltantes;
     }
 
-    public void setIdProductosFaltantes(int idProductosFaltantes) {
+    public void setIdProductosFaltantes(long idProductosFaltantes) {
         this.idProductosFaltantes = idProductosFaltantes;
     }
 

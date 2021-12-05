@@ -3,6 +3,7 @@ package com.ejemplo.tiendaalamano.service;
 import com.ejemplo.tiendaalamano.model.PagoCuota;
 import com.ejemplo.tiendaalamano.repository.PagoCuotaRepository;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,6 +28,18 @@ public class PagoCuotaServiceImpl implements PagoCuotaService {
     @Transactional
     public PagoCuota save(PagoCuota pagoCuota) {
         return pagoCuotaRepository.save(pagoCuota);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Optional<PagoCuota> findById(Long id) {
+        return pagoCuotaRepository.findById(id);
+    }
+
+    @Override
+    @Transactional
+    public void deleteById(Long id) {
+        pagoCuotaRepository.deleteById(id);
     }
     
 }
