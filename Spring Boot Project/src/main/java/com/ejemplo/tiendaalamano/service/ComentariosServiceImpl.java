@@ -5,39 +5,40 @@
  */
 package com.ejemplo.tiendaalamano.service;
 
-import com.ejemplo.tiendaalamano.model.Ciudad;
-import com.ejemplo.tiendaalamano.repository.CiudadRepository;
+import com.ejemplo.tiendaalamano.model.Comentarios;
+import com.ejemplo.tiendaalamano.repository.ComentariosRepository;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 
-public class CiudadServiceImpl implements CiudadService{
+public class ComentariosServiceImpl implements ComentariosService{
+    
     @Autowired
-    private CiudadRepository ciudadRepository;
+    private ComentariosRepository comentariosRepository;
 
     @Override
     @Transactional(readOnly = true)
-    public List<Ciudad> findAll() {
-        return ciudadRepository.findAll();
+    public List<Comentarios> findAll() {
+        return comentariosRepository.findAll();
     }
 
     @Override
     @Transactional
-    public Ciudad save(Ciudad Ciudad) {
-        return ciudadRepository.save(Ciudad);
+    public Comentarios save(Comentarios comentarios) {
+        return comentariosRepository.save(comentarios);
     }
 
     @Override
     @Transactional(readOnly = true)
-    public Optional<Ciudad> findById(Long id) {
-        return ciudadRepository.findById(id);
+    public Optional<Comentarios> findById(Long id) {
+        return comentariosRepository.findById(id);
     }
 
     @Override
     @Transactional
     public void deleteById(Long id) {
-        ciudadRepository.deleteById(id);
+        comentariosRepository.deleteById(id);
     }
 }

@@ -46,7 +46,7 @@ public class CategoriaController {
         return categoriaRepository.findById(id);
     }
     
-    //Eliminar ategorias por id
+    //Eliminar Categorias por id
     @RequestMapping(value = "/categoria/eliminar/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
     public void deleteCategoriaById(@PathVariable Long id) {

@@ -18,7 +18,7 @@ import javax.persistence.Table;
  * @author
  */
 @Entity
-@Table(name="comentario")
+@Table(name="comentarios")
 public class Comentarios implements Serializable{
     private static final long serialVersionUID = -3904417485279370766L;
 
@@ -29,8 +29,8 @@ public class Comentarios implements Serializable{
     @Column(length = 45, nullable=false)
     private String comentario;
 
-    @Column(length = 45, nullable=false)
-    private Long id_producto;
+    @Column(nullable=false)
+    private int producto_id_producto;
 
     public Long getId_Comentarios() {
         return id_Comentarios;
@@ -48,11 +48,13 @@ public class Comentarios implements Serializable{
         this.comentario = comentario;
     }
 
-    public Long getId_producto() {
-        return id_producto;
+    public int getProducto_id_producto() {
+        return producto_id_producto;
     }
 
-    public void setId_producto(Long id_producto) {
-        this.id_producto = id_producto;
+    public void setProducto_id_producto(int producto_id_producto) {
+        this.producto_id_producto = producto_id_producto;
     }
+
+    
 }
