@@ -60,6 +60,4 @@ public class PuntosController {
     public void updatePuntosById(@PathVariable Long id,@RequestBody @Validated Puntos puntos) {
         puntosRepository.save(puntos);
     }
-    
-    
 }
