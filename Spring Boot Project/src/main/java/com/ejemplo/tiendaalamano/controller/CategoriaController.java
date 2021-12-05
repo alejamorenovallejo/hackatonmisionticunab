@@ -39,21 +39,21 @@ public class CategoriaController {
         categoriaRepository.save(categoria);
     }
     
-    //Consultar puntos por id
+    //Consultar categorias por id
     @RequestMapping(value = "/categoria/consultar/{id}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public Optional<Categoria> getCategoriaById(@PathVariable Long id) {
         return categoriaRepository.findById(id);
     }
     
-    //Eliminar puntos por id
+    //Eliminar ategorias por id
     @RequestMapping(value = "/categoria/eliminar/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
     public void deleteCategoriaById(@PathVariable Long id) {
         categoriaRepository.deleteById(id);
     }
     
-    //Actualizar puntos por id
+    //Actualizar Categorias por id
     @RequestMapping(value = "/categoria/actualizar/{id}", method = RequestMethod.PUT, consumes = "application/json")
     @ResponseStatus(HttpStatus.OK)
     public void updateCategoriaById(@PathVariable Long id,@RequestBody @Validated Categoria categoria) {
