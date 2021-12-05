@@ -16,10 +16,10 @@ public class Domiciliario implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idDomiciliario;
+	private long idDomiciliario;
 	
-	@Column(length = 45, nullable=false)
-	private String tipoDocumentoIdTipoDocumento;
+	@Column(nullable=false)
+	private int tipoDocumentoIdTipoDocumento;
 	
 	@Column(length = 45, nullable=false)
 	private String identificacion;
@@ -36,19 +36,19 @@ public class Domiciliario implements Serializable{
 	@Column(length = 45, nullable=false)
 	private String inactivo;
 
-    public int getIdDomiciliario() {
+    public long getIdDomiciliario() {
         return idDomiciliario;
     }
 
-    public void setIdDomiciliario(int idDomiciliario) {
+    public void setIdDomiciliario(long idDomiciliario) {
         this.idDomiciliario = idDomiciliario;
     }
 
-    public String getTipoDocumentoIdTipoDcoumento() {
+    public int getTipoDocumentoIdTipoDcoumento() {
         return tipoDocumentoIdTipoDocumento;
     }
 
-    public void setTipoDocumentoIdTipoDcoumento(String tipoDocumentoIdTipoDcoumento) {
+    public void setTipoDocumentoIdTipoDcoumento(int tipoDocumentoIdTipoDcoumento) {
         this.tipoDocumentoIdTipoDocumento = tipoDocumentoIdTipoDcoumento;
     }
 

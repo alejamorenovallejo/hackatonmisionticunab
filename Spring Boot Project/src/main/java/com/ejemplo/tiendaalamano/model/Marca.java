@@ -16,7 +16,7 @@ public class Marca implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idMarca;
+	private long idMarca;
 	
 	@Column(length = 45, nullable=false)
 	private String marca;
@@ -24,11 +24,11 @@ public class Marca implements Serializable{
 	@Column(length = 45, nullable=false)
 	private String inactivo;
 
-    public int getIdMarca() {
+    public long getIdMarca() {
         return idMarca;
     }
 
-    public void setIdMarca(int idMarca) {
+    public void setIdMarca(long idMarca) {
         this.idMarca = idMarca;
     }
 

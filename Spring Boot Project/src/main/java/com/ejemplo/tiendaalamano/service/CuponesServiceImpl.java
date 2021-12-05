@@ -16,6 +16,12 @@ public class CuponesServiceImpl implements CuponesService {
 	private CuponesRepository CuponesRepository;
 
 	@Override
+	@Transactional
+	public Cupones save(Cupones Cupones) {
+		return CuponesRepository.save(Cupones);
+	}
+        
+        @Override
 	@Transactional(readOnly = true)
 	public List<Cupones> findAll() {
 		return CuponesRepository.findAll();
@@ -27,11 +33,6 @@ public class CuponesServiceImpl implements CuponesService {
 		return CuponesRepository.findById(id);
 	}
 
-	@Override
-	@Transactional
-	public Cupones save(Cupones Cupones) {
-		return CuponesRepository.save(Cupones);
-	}
 
 	@Override
 	@Transactional
@@ -45,9 +46,4 @@ public class CuponesServiceImpl implements CuponesService {
 		return Domiciliarios;
 	}
 */
-
-    @Override
-    public List<Cupones> login(String username, String password) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

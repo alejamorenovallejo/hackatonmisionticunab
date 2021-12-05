@@ -15,6 +15,12 @@ public class MarcaServiceImpl implements MarcaService {
 	@Autowired
 	private MarcaRepository MarcaRepository;
 
+        @Override
+	@Transactional
+	public Marca save(Marca Marca) {
+		return MarcaRepository.save(Marca);
+	}
+        
 	@Override
 	@Transactional(readOnly = true)
 	public List<Marca> findAll() {
@@ -25,12 +31,6 @@ public class MarcaServiceImpl implements MarcaService {
 	@Transactional(readOnly = true)
 	public Optional<Marca> findById(Long id) {
 		return MarcaRepository.findById(id);
-	}
-
-	@Override
-	@Transactional
-	public Marca save(Marca Marca) {
-		return MarcaRepository.save(Marca);
 	}
 
 	@Override
@@ -46,8 +46,4 @@ public class MarcaServiceImpl implements MarcaService {
 	}
 */
 
-    @Override
-    public List<Marca> login(String username, String password) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

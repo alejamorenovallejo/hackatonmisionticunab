@@ -7,10 +7,9 @@ import java.util.Optional;
 
 
 public interface CuponesService {
-	public List<Cupones> findAll();
-	public Optional<Cupones> findById(Long id);
-	public List<Cupones> login(String username, String password);
-	public Cupones save(Cupones Cupones);
+        public Cupones save(Cupones Cupones);	
+        public List<Cupones> findAll();
+        public Optional<Cupones> findById(Long id);
 	public void deleteById(Long id);
 	
 }

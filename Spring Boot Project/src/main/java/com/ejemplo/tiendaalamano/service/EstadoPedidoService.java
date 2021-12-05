@@ -6,10 +6,9 @@ import java.util.Optional;
 
 
 public interface EstadoPedidoService {
+        public EstadoPedido save(EstadoPedido EstadoPedido);
 	public List<EstadoPedido> findAll();
-	public Optional<EstadoPedido> findById(Long id);
-	public List<EstadoPedido> login(String username, String password);
-	public EstadoPedido save(EstadoPedido EstadoPedido);
+        public Optional<EstadoPedido> findById(Long id);
 	public void deleteById(Long id);
 	
 }

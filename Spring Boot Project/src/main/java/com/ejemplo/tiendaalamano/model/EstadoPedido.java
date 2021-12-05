@@ -16,16 +16,16 @@ public class EstadoPedido implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idEstadoPedido;
+	private long idEstadoPedido;
 	
 	@Column(length = 45, nullable=false)
 	private String estadoPedido;
 
-    public int getIdEstadoPedido() {
+    public long getIdEstadoPedido() {
         return idEstadoPedido;
     }
 
-    public void setIdEstadoPedido(int idEstadoPedido) {
+    public void setIdEstadoPedido(long idEstadoPedido) {
         this.idEstadoPedido = idEstadoPedido;
     }
 

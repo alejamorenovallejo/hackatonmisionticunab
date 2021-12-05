@@ -16,6 +16,12 @@ public class EstadoPedidoServiceImpl implements EstadoPedidoService {
 	private EstadoPedidoRepository EstadoPedidoRepository;
 
 	@Override
+	@Transactional
+	public EstadoPedido save(EstadoPedido EstadoPedido) {
+		return EstadoPedidoRepository.save(EstadoPedido);
+	}
+        
+        @Override
 	@Transactional(readOnly = true)
 	public List<EstadoPedido> findAll() {
 		return EstadoPedidoRepository.findAll();
@@ -27,11 +33,6 @@ public class EstadoPedidoServiceImpl implements EstadoPedidoService {
 		return EstadoPedidoRepository.findById(id);
 	}
 
-	@Override
-	@Transactional
-	public EstadoPedido save(EstadoPedido EstadoPedido) {
-		return EstadoPedidoRepository.save(EstadoPedido);
-	}
 
 	@Override
 	@Transactional
@@ -46,8 +47,4 @@ public class EstadoPedidoServiceImpl implements EstadoPedidoService {
 	}
 */
 
-    @Override
-    public List<EstadoPedido> login(String username, String password) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

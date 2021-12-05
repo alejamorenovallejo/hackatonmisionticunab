@@ -16,28 +16,28 @@ public class Cupones implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_cupones;
+	private long id_cupones;
 	
 	@Column(length = 45, nullable=false)
 	private String nombre;
         
-        @Column(length = 45, nullable=false)
-	private String productoIdProducto;
+        @Column(nullable=false)
+	private int productoIdProducto;
 	
 	@Column(length = 45, nullable=false)
-	private String valor;
+	private float valor;
         
-        @Column(length = 45, nullable=false)
-	private String tipoCuponIdTipoCupon;
+        @Column(nullable=false)
+	private int tipoCuponIdTipoCupon;
 	
 	@Column(length = 45, nullable=false)
 	private String fecha_caducidad;
 
-    public int getId_cupones() {
+    public long getId_cupones() {
         return id_cupones;
     }
 
-    public void setId_cupones(int id_cupones) {
+    public void setId_cupones(long id_cupones) {
         this.id_cupones = id_cupones;
     }
 
@@ -49,27 +49,27 @@ public class Cupones implements Serializable{
         this.nombre = nombre;
     }
 
-    public String getProductoIdProducto() {
+    public int getProductoIdProducto() {
         return productoIdProducto;
     }
 
-    public void setProductoIdProducto(String productoIdProducto) {
+    public void setProductoIdProducto(int productoIdProducto) {
         this.productoIdProducto = productoIdProducto;
     }
 
-    public String getValor() {
+    public float getValor() {
         return valor;
     }
 
-    public void setValor(String valor) {
+    public void setValor(float valor) {
         this.valor = valor;
     }
 
-    public String getTipoCuponIdTipoCupon() {
+    public int getTipoCuponIdTipoCupon() {
         return tipoCuponIdTipoCupon;
     }
 
-    public void setTipoCuponIdTipoCupon(String tipoCuponIdTipoCupon) {
+    public void setTipoCuponIdTipoCupon(int tipoCuponIdTipoCupon) {
         this.tipoCuponIdTipoCupon = tipoCuponIdTipoCupon;
     }
 
@@ -80,6 +80,7 @@ public class Cupones implements Serializable{
     public void setFecha_caducidad(String fecha_caducidad) {
         this.fecha_caducidad = fecha_caducidad;
     }
+
 
         
 }

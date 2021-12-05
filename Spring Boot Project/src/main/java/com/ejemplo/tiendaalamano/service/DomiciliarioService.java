@@ -6,10 +6,9 @@ import java.util.Optional;
 
 
 public interface DomiciliarioService {
-	public List<Domiciliario> findAll();
-	public Optional<Domiciliario> findById(Long id);
-	public List<Domiciliario> login(String username, String password);
-	public Domiciliario save(Domiciliario Domiciliario);
+        public Domiciliario save(Domiciliario Domiciliario);	
+        public List<Domiciliario> findAll();
+        public Optional<Domiciliario> findById(Long id);
 	public void deleteById(Long id);
 	
 }

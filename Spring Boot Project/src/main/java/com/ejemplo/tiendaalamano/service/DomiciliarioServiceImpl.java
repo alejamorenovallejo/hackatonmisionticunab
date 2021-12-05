@@ -15,6 +15,12 @@ public class DomiciliarioServiceImpl implements DomiciliarioService {
 	@Autowired
 	private DomiciliarioRepository DomiciliarioRepository;
 
+        @Override
+	@Transactional
+	public Domiciliario save(Domiciliario Domiciliario) {
+		return DomiciliarioRepository.save(Domiciliario);
+	}
+        
 	@Override
 	@Transactional(readOnly = true)
 	public List<Domiciliario> findAll() {
@@ -25,12 +31,6 @@ public class DomiciliarioServiceImpl implements DomiciliarioService {
 	@Transactional(readOnly = true)
 	public Optional<Domiciliario> findById(Long id) {
 		return DomiciliarioRepository.findById(id);
-	}
-
-	@Override
-	@Transactional
-	public Domiciliario save(Domiciliario Domiciliario) {
-		return DomiciliarioRepository.save(Domiciliario);
 	}
 
 	@Override
@@ -46,8 +46,4 @@ public class DomiciliarioServiceImpl implements DomiciliarioService {
 	}
 */
 
-    @Override
-    public List<Domiciliario> login(String username, String password) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

@@ -6,10 +6,9 @@ import java.util.Optional;
 
 
 public interface MarcaService {
-	public List<Marca> findAll();
-	public Optional<Marca> findById(Long id);
-	public List<Marca> login(String username, String password);
 	public Marca save(Marca Marca);
+        public List<Marca> findAll();
+	public Optional<Marca> findById(Long id);
 	public void deleteById(Long id);
 	
 }
