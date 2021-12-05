@@ -52,14 +52,14 @@ public class PuntosController {
     //Eliminar puntos por id
     @RequestMapping(value = "/puntos/eliminar/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
-    public void deleteModelById(@PathVariable Long id) {
+    public void deletePuntosById(@PathVariable Long id) {
         puntosRepository.deleteById(id);
     }
     
     //Actualizar puntos por id
     @RequestMapping(value = "/puntos/actualizar/{id}", method = RequestMethod.PUT, consumes = "application/json")
     @ResponseStatus(HttpStatus.OK)
-    public void updateModelById(@PathVariable Long id,@RequestBody @Validated Puntos puntos) {
+    public void updatePuntosById(@PathVariable Long id,@RequestBody @Validated Puntos puntos) {
         puntosRepository.save(puntos);
     }
     
