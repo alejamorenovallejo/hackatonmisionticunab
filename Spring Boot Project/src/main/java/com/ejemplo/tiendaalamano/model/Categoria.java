@@ -5,20 +5,30 @@
  */
 package com.ejemplo.tiendaalamano.model;
 
+import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
- * @author Macanita
+ * @author 
  */
-public class Categoria {
+@Entity
+@Table(name="categoria")
+public class Categoria implements Serializable{
     private static final long serialVersionUID = -3904417485279370766L;
 
-	@Id
+    @Id
     private Long idCategoria;
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(length = 45, nullable=false)
     private String categoria;
     
+    @Column(length = 45, nullable=false)
     private String inactivo;
 
     public Categoria(Long idCategoria, String categoria, String inactivo) {

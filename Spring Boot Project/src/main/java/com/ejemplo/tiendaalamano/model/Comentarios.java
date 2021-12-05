@@ -18,37 +18,41 @@ import javax.persistence.Table;
  * @author
  */
 @Entity
-@Table(name="ciudad")
-public class Ciudad implements Serializable{
+@Table(name="comentario")
+public class Comentarios implements Serializable{
     private static final long serialVersionUID = -3904417485279370766L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idCiudad;
+    private Long id_Comentarios;
+        
+    @Column(length = 45, nullable=false)
+    private String comentario;
 
     @Column(length = 45, nullable=false)
-    private String ciudad;
+    private Long id_producto;
 
-    public Ciudad(Long idCiudad, String ciudad) {
-        this.idCiudad = idCiudad;
-        this.ciudad = ciudad;
+    public Long getId_Comentarios() {
+        return id_Comentarios;
     }
 
-    public Long getIdCiudad() {
-        return idCiudad;
+    public void setId_Comentarios(Long id_Comentarios) {
+        this.id_Comentarios = id_Comentarios;
     }
 
-    public void setIdCiudad(Long idCiudad) {
-        this.idCiudad = idCiudad;
+    public String getComentario() {
+        return comentario;
     }
 
-    public String getCiudad() {
-        return ciudad;
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
     }
 
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
+    public Long getId_producto() {
+        return id_producto;
     }
-    
-    
+
+    public void setId_producto(Long id_producto) {
+        this.id_producto = id_producto;
+    }
 }
