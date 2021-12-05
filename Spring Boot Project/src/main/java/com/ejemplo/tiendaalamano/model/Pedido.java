@@ -20,7 +20,7 @@ public class Pedido implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idPedido;
+    private long idPedido;
 
     @Column(nullable = false)
     private int compraIdCompra;
@@ -49,11 +49,11 @@ public class Pedido implements Serializable {
     @Column(nullable = false)
     private int domiciliarioIdDomiciliario;
 
-    public int getIdPedido() {
+    public long getIdPedido() {
         return idPedido;
     }
 
-    public void setIdPedido(int idPedido) {
+    public void setIdPedido(long idPedido) {
         this.idPedido = idPedido;
     }
 
