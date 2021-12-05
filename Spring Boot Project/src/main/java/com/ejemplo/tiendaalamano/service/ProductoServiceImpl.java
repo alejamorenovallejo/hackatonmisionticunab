@@ -12,15 +12,21 @@ import org.springframework.transaction.annotation.Transactional;
  * @author Leandro Aguirre
  */
 @Service
-public class ProductoServiceImpl  implements ProductoService {
+public class ProductoServiceImpl implements ProductoService {
 
     @Autowired
     private ProductoRepository productoRepository;
-    
+
     @Override
     @Transactional(readOnly = true)
     public List<Producto> findAll() {
         return productoRepository.findAll();
     }
-    
+
+    @Override
+    @Transactional
+    public Producto save(Producto producto) {
+        return productoRepository.save(producto);
+    }
+
 }

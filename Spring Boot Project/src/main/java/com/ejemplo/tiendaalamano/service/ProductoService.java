@@ -9,4 +9,5 @@ import java.util.List;
  */
 public interface ProductoService {
     public List<Producto> findAll();
+    public Producto save(Producto producto);
 }

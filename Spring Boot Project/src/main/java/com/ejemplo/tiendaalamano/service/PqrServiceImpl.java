@@ -22,4 +22,10 @@ public class PqrServiceImpl implements PqrService {
     public List<Pqr> findAll() {
         return pqrRepository.findAll();
     }
+    
+    @Override
+    @Transactional
+    public Pqr save(Pqr pqr) {
+        return pqrRepository.save(pqr);
+    }
 }
