@@ -1,6 +1,5 @@
 package com.ejemplo.tiendaalamano.controller;
 
-import com.ejemplo.tiendaalamano.model.Model;
 import com.ejemplo.tiendaalamano.model.Puntos;
 import com.ejemplo.tiendaalamano.repository.PuntosRepository;
 
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -52,16 +50,14 @@ public class PuntosController {
     //Eliminar puntos por id
     @RequestMapping(value = "/puntos/eliminar/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
-    public void deleteModelById(@PathVariable Long id) {
+    public void deletePuntosById(@PathVariable Long id) {
         puntosRepository.deleteById(id);
     }
     
     //Actualizar puntos por id
     @RequestMapping(value = "/puntos/actualizar/{id}", method = RequestMethod.PUT, consumes = "application/json")
     @ResponseStatus(HttpStatus.OK)
-    public void updateModelById(@PathVariable Long id,@RequestBody @Validated Puntos puntos) {
+    public void updatePuntosById(@PathVariable Long id,@RequestBody @Validated Puntos puntos) {
         puntosRepository.save(puntos);
     }
-    
-    
 }

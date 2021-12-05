@@ -20,7 +20,7 @@ public class PuntoVenta implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_puntoventa;
+    private long id_puntoventa;
     
     @Column(length = 45, nullable=false)
     private String punto_venta;
@@ -37,11 +37,11 @@ public class PuntoVenta implements Serializable{
     @Column(nullable=false)
     private int ciudad_id_ciudad;
 
-    public int getId_puntoventa() {
+    public long getId_puntoventa() {
         return id_puntoventa;
     }
 
-    public void setId_puntoventa(int id_puntoventa) {
+    public void setId_puntoventa(long id_puntoventa) {
         this.id_puntoventa = id_puntoventa;
     }
 
@@ -84,5 +84,4 @@ public class PuntoVenta implements Serializable{
     public void setCiudad_id_ciudad(int ciudad_id_ciudad) {
         this.ciudad_id_ciudad = ciudad_id_ciudad;
     }
-    
 }

@@ -8,6 +8,8 @@ package com.ejemplo.tiendaalamano.model;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -18,9 +20,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "tarifa")
 public class Tarifa implements Serializable{
-    
+    private static final long serialVersionUID = -5773962493781143007L;
+
     @Id
-    private int id_tarifa;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id_tarifa;
     
     @Column(nullable=false)
     private int cantidad;
@@ -31,11 +35,11 @@ public class Tarifa implements Serializable{
     @Column(nullable=false)
     private float tarifa;
 
-    public int getId_tarifa() {
+    public long getId_tarifa() {
         return id_tarifa;
     }
 
-    public void setId_tarifa(int id_tarifa) {
+    public void setId_tarifa(long id_tarifa) {
         this.id_tarifa = id_tarifa;
     }
 

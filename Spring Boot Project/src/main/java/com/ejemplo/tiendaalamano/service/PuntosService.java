@@ -13,5 +13,4 @@ public interface PuntosService {
     public Puntos save(Puntos Puntos);
     public Optional<Puntos> findById(Long id);
     public void deleteById(Long id);
-
 }
