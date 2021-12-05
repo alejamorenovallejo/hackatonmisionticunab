@@ -26,35 +26,35 @@ public class RedesController {
     @Autowired
     private RedesRepository redesRepository;
     
-    //Consultar todos los puntos
+    //Consultar todos las redes
     @RequestMapping(value = "/redes/all", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public List<Redes> getAllRedes() {
         return redesRepository.findAll();
     }
     
-    //Crear Puntos
+    //Crear Redes
     @RequestMapping(value = "/redes/crear", method = RequestMethod.POST, consumes = "application/json")
     @ResponseStatus(HttpStatus.CREATED)
     public void createRedes(@RequestBody @Validated Redes redes) {
         redesRepository.save(redes);
     }
 
-    //Consultar puntos por id
+    //Consultar redes por id
     @RequestMapping(value = "/redes/consultar/{id}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public Optional<Redes> getRedesById(@PathVariable Long id) {
         return redesRepository.findById(id);
     }
     
-    //Eliminar puntos por id
+    //Eliminar reddes por id
     @RequestMapping(value = "/redes/eliminar/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
     public void deleteRedesById(@PathVariable Long id) {
         redesRepository.deleteById(id);
     }
     
-    //Actualizar puntos por id
+    //Actualizar redes por id
     @RequestMapping(value = "/redes/actualizar/{id}", method = RequestMethod.PUT, consumes = "application/json")
     @ResponseStatus(HttpStatus.OK)
     public void updateRedesById(@PathVariable Long id,@RequestBody @Validated Redes redes) {

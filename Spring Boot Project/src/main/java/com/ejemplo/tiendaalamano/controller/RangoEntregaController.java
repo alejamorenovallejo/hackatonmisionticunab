@@ -32,28 +32,28 @@ public class RangoEntregaController {
         return rangoentregaRepository.findAll();
     }
     
-     //Crear Puntos
+     //Crear Rangos de entrega
     @RequestMapping(value = "/rangoentrega/crear", method = RequestMethod.POST, consumes = "application/json")
     @ResponseStatus(HttpStatus.CREATED)
     public void createRangoEntrega(@RequestBody @Validated RangoEntrega rangoentrega) {
         rangoentregaRepository.save(rangoentrega);
     }
 
-    //Consultar puntos por id
+    //Consultar Rangos de entrega por id
     @RequestMapping(value = "/rangoentrega/consultar/{id}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public Optional<RangoEntrega> getRangoEntregaById(@PathVariable Long id) {
         return rangoentregaRepository.findById(id);
     }
     
-    //Eliminar puntos por id
+    //Eliminar Rangos de entrega por id
     @RequestMapping(value = "/rangoentrega/eliminar/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
     public void deleteRangoEntregaById(@PathVariable Long id) {
         rangoentregaRepository.deleteById(id);
     }
     
-    //Actualizar puntos por id
+    //Actualizar Rangos de entrega por id
     @RequestMapping(value = "/rangoentrega/actualizar/{id}", method = RequestMethod.PUT, consumes = "application/json")
     @ResponseStatus(HttpStatus.OK)
     public void updateRangoEntregaById(@PathVariable Long id,@RequestBody @Validated RangoEntrega rangoentrega) {

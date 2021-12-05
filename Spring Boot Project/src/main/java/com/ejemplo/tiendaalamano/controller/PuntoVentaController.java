@@ -32,7 +32,7 @@ public class PuntoVentaController {
         return puntoventaRepository.findAll();
     }
     
-    //Crear Puntos
+    //Crear Puntos de venta
     @RequestMapping(value = "/puntoventa/crear", method = RequestMethod.POST, consumes = "application/json")
     @ResponseStatus(HttpStatus.CREATED)
     public void createPuntoVenta(@RequestBody @Validated PuntoVenta PuntoVenta) {
